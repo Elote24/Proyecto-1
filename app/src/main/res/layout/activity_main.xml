@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TextNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Nombre"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Escriba su Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextNombre"
+        app:layout_constraintStart_toStartOf="@id/TextNombre"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/TextTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Telefono"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/EditNombre"
+        app:layout_constraintTop_toBottomOf="@+id/EditNombre" />
+
+    <EditText
+        android:id="@+id/EditTelefono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Escriba su telefono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextTelefono"
+        app:layout_constraintStart_toStartOf="@id/TextTelefono"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/TextCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Correo"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/EditTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/EditTelefono" />
+    <EditText
+        android:id="@+id/EditCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Escriba su Correo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextCorreo"
+        app:layout_constraintStart_toStartOf="@id/TextCorreo"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="157dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/EditCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/EditCorreo">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio 1" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio 2" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio 3" />
+    </RadioGroup>
+    <CheckBox
+        android:id="@+id/checbox_electronica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electronica"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkbox_house"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="House"
+        app:layout_constraintStart_toStartOf="@+id/checbox_electronica"
+        app:layout_constraintTop_toBottomOf="@+id/checbox_electronica" />
+
+    <CheckBox
+        android:id="@+id/checkbox_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock"
+        app:layout_constraintStart_toStartOf="@+id/checkbox_house"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_house" />
+    <CheckBox
+        android:id="@+id/checkbox_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pop"
+        app:layout_constraintStart_toStartOf="@+id/checkbox_rock"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_rock" />
+
+    <CheckBox
+        android:id="@+id/checkbox_co"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pop"
+        app:layout_constraintStart_toStartOf="@+id/checkbox_pop"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_pop" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="255dp"
+        android:layout_height="187dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="483dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
