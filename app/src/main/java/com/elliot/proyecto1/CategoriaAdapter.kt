@@ -32,4 +32,6 @@ class CategoriaAdapter (private val categorias: List<Categoria>) : RecyclerView.
     override fun getItemCount(): Int {
         return categorias.size
     }
+
+
 }

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/TextNombre"
+        android:id="@+id/textNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -19,20 +23,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/EditNombre"
+        android:id="@+id/editNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="phone"
+        android:inputType="text"
         android:hint="Escriba su Nombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextNombre"
-        app:layout_constraintStart_toStartOf="@id/TextNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textNombre"
+        app:layout_constraintStart_toStartOf="@id/textNombre"
         tools:layout_editor_absoluteX="8dp" />
 
     <TextView
-        android:id="@+id/TextTelefono"
+        android:id="@+id/textTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -40,11 +44,11 @@
         android:textSize="18sp"
         android:textColor="@color/title"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/EditNombre"
-        app:layout_constraintTop_toBottomOf="@+id/EditNombre" />
+        app:layout_constraintStart_toStartOf="@+id/editNombre"
+        app:layout_constraintTop_toBottomOf="@+id/editNombre" />
 
     <EditText
-        android:id="@+id/EditTelefono"
+        android:id="@+id/editTelefono"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -52,12 +56,12 @@
         android:inputType="phone"
         android:hint="Escriba su telefono"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextTelefono"
-        app:layout_constraintStart_toStartOf="@id/TextTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/textTelefono"
+        app:layout_constraintStart_toStartOf="@id/textTelefono"
         tools:layout_editor_absoluteX="8dp" />
 
     <TextView
-        android:id="@+id/TextCorreo"
+        android:id="@+id/textCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -65,62 +69,62 @@
         android:textSize="18sp"
         android:textColor="@color/title"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/EditTelefono"
-        app:layout_constraintTop_toBottomOf="@+id/EditTelefono" />
+        app:layout_constraintStart_toStartOf="@+id/editTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefono" />
     <EditText
-        android:id="@+id/EditCorreo"
+        android:id="@+id/editCorreo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="phone"
+        android:inputType="textEmailAddress"
         android:hint="Escriba su Correo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextCorreo"
-        app:layout_constraintStart_toStartOf="@id/TextCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/textCorreo"
+        app:layout_constraintStart_toStartOf="@id/textCorreo"
         tools:layout_editor_absoluteX="8dp" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="157dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/EditCorreo"
-        app:layout_constraintTop_toBottomOf="@+id/EditCorreo">
-
-        <TextView
-            android:id="@+id/TextTipo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="188dp"
+            android:layout_height="167dp"
             android:layout_marginTop="8dp"
-            android:text="Planes de pago"
-            android:textSize="18sp"
-            android:textColor="@color/title"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/radioGroup"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintStart_toStartOf="@+id/editCorreo"
+            app:layout_constraintTop_toBottomOf="@+id/editCorreo">
 
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Basico" />
+            <TextView
+                android:id="@+id/textPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Plan de pago"
+                android:textColor="@color/title"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/radioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estandar" />
+            <RadioButton
+                android:id="@+id/radioBasico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Basico" />
 
-        <RadioButton
-            android:id="@+id/radio3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Premium" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/radioEstandar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estandar" />
+
+            <RadioButton
+                android:id="@+id/radioPremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Premium" />
+        </RadioGroup>
 
     <TextView
-        android:id="@+id/TextCategoria"
+        android:id="@+id/textCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -132,43 +136,43 @@
         app:layout_constraintTop_toTopOf="@+id/radioGroup" />
 
     <CheckBox
-        android:id="@+id/checbox_electronica"
+        android:id="@+id/checkRomantica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Romantica"
-        app:layout_constraintStart_toStartOf="@+id/TextCategoria"
-        app:layout_constraintTop_toBottomOf="@+id/TextCategoria" />
+        app:layout_constraintStart_toStartOf="@+id/textCategoria"
+        app:layout_constraintTop_toBottomOf="@+id/textCategoria" />
 
     <CheckBox
-        android:id="@+id/checkbox_house"
+        android:id="@+id/checkTerror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Terror"
-        app:layout_constraintStart_toStartOf="@+id/checbox_electronica"
-        app:layout_constraintTop_toBottomOf="@+id/checbox_electronica" />
+        app:layout_constraintStart_toStartOf="@+id/checkRomantica"
+        app:layout_constraintTop_toBottomOf="@+id/checkRomantica" />
 
     <CheckBox
-        android:id="@+id/checkbox_rock"
+        android:id="@+id/checkComedia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comedia"
-        app:layout_constraintStart_toStartOf="@+id/checkbox_house"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_house" />
+        app:layout_constraintStart_toStartOf="@+id/checkTerror"
+        app:layout_constraintTop_toBottomOf="@+id/checkTerror" />
     <CheckBox
-        android:id="@+id/checkbox_pop"
+        android:id="@+id/checkAnime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Anime"
-        app:layout_constraintStart_toStartOf="@+id/checkbox_rock"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_rock" />
+        app:layout_constraintStart_toStartOf="@+id/checkComedia"
+        app:layout_constraintTop_toBottomOf="@+id/checkComedia" />
 
     <CheckBox
-        android:id="@+id/checkbox_co"
+        android:id="@+id/checkAccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Accion"
-        app:layout_constraintStart_toStartOf="@+id/checkbox_pop"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_pop" />
+        app:layout_constraintStart_toStartOf="@+id/checkAnime"
+        app:layout_constraintTop_toBottomOf="@+id/checkAnime" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -177,10 +181,10 @@
         android:layout_marginTop="51dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkbox_co" />
+        app:layout_constraintTop_toTopOf="@+id/checkAccion" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/actionDialog"
+        android:id="@+id/fabActionDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -192,3 +196,6 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
