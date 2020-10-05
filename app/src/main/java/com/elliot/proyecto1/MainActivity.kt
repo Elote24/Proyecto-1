@@ -67,11 +67,11 @@ class MainActivity : AppCompatActivity() {
     private val fabClick = View.OnClickListener { fab ->
         var textoRadio = ""
         if (radioBasico.isChecked) {
-            textoRadio = radioBasico.text.toString() + "\n"
+            textoRadio = radioBasico.text.toString()
         } else if (radioEstandar.isChecked) {
-            textoRadio = radioEstandar.text.toString() + "\n"
+            textoRadio = radioEstandar.text.toString()
         } else if (radioPremium.isChecked) {
-            textoRadio = radioBasico.text.toString() + "\n"
+            textoRadio = radioBasico.text.toString()
         }
         var textoCategoria = ""
         if (checkRomantico.isChecked) {
@@ -108,9 +108,8 @@ class MainActivity : AppCompatActivity() {
             val categorias = mutableListOf<Categoria>()
             val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
             val categoriaAdapter = CategoriaAdapter(categorias)
-            recyclerView.layoutManager = LinearLayoutManager(this)
+            recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
             recyclerView.adapter = categoriaAdapter
-
 
             if (checkRomantico.isChecked) {
                 categorias.add(
