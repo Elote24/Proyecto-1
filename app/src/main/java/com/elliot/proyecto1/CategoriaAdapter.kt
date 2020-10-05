@@ -7,7 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CategoriaAdapter (private val categorias: List<Categoria>) : RecyclerView.Adapter<CategoriaAdapter.CategoriaHolder>() {
+class CategoriaAdapter(private val categorias: List<Categoria>) :
+    RecyclerView.Adapter<CategoriaAdapter.CategoriaHolder>() {
     class CategoriaHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun onBind(categoria: Categoria) {
             val title = view.findViewById<TextView>(R.id.title)

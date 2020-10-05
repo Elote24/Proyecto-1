@@ -9,91 +9,91 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".MainActivity"
-        >
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Nombre"
-        android:textSize="18sp"
-        android:textColor="@color/rojo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Nombre"
+            android:textColor="@color/rojo"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editNombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Escriba su Nombre"
-        android:textColorHint="@color/blanco"
-        android:textColor="@color/blanco"
-        android:backgroundTint="@color/blanco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNombre"
-        app:layout_constraintStart_toStartOf="@id/textNombre"
-        tools:layout_editor_absoluteX="8dp" />
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/blanco"
+            android:ems="10"
+            android:hint="Escriba su Nombre"
+            android:inputType="text"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/blanco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textNombre"
+            app:layout_constraintTop_toBottomOf="@+id/textNombre"
+            tools:layout_editor_absoluteX="8dp" />
 
-    <TextView
-        android:id="@+id/textTelefono"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Telefono"
-        android:textSize="18sp"
-        android:textColor="@color/rojo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editNombre"
-        app:layout_constraintTop_toBottomOf="@+id/editNombre" />
+        <TextView
+            android:id="@+id/textTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Telefono"
+            android:textColor="@color/rojo"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editNombre"
+            app:layout_constraintTop_toBottomOf="@+id/editNombre" />
 
-    <EditText
-        android:id="@+id/editTelefono"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:hint="Escriba su telefono"
-        android:textColorHint="@color/blanco"
-        android:textColor="@color/blanco"
-        android:backgroundTint="@color/blanco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTelefono"
-        app:layout_constraintStart_toStartOf="@id/textTelefono"
-        tools:layout_editor_absoluteX="8dp" />
+        <EditText
+            android:id="@+id/editTelefono"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/blanco"
+            android:ems="10"
+            android:hint="Escriba su telefono"
+            android:inputType="phone"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/blanco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/textTelefono"
+            tools:layout_editor_absoluteX="8dp" />
 
-    <TextView
-        android:id="@+id/textCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Correo"
-        android:textSize="18sp"
-        android:textColor="@color/rojo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editTelefono"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefono" />
-    <EditText
-        android:id="@+id/editCorreo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="Escriba su Correo"
-        android:textColorHint="@color/blanco"
-        android:textColor="@color/blanco"
-        android:backgroundTint="@color/blanco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCorreo"
-        app:layout_constraintStart_toStartOf="@id/textCorreo"
-        tools:layout_editor_absoluteX="8dp" />
+        <TextView
+            android:id="@+id/textCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Correo"
+            android:textColor="@color/rojo"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/editTelefono" />
+
+        <EditText
+            android:id="@+id/editCorreo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/blanco"
+            android:ems="10"
+            android:hint="Escriba su Correo"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/blanco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textCorreo"
+            app:layout_constraintTop_toBottomOf="@+id/textCorreo"
+            tools:layout_editor_absoluteX="8dp" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -119,35 +119,35 @@
                 android:id="@+id/radioBasico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blanco"
-                android:text="Basico" />
+                android:text="Basico"
+                android:textColor="@color/blanco" />
 
             <RadioButton
                 android:id="@+id/radioEstandar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blanco"
-                android:text="Estandar" />
+                android:text="Estandar"
+                android:textColor="@color/blanco" />
 
             <RadioButton
                 android:id="@+id/radioPremium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blanco"
-                android:text="Premium" />
+                android:text="Premium"
+                android:textColor="@color/blanco" />
         </RadioGroup>
 
-    <TextView
-        android:id="@+id/textCategoria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Categorias"
-        android:textColor="@color/rojo"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+        <TextView
+            android:id="@+id/textCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Categorias"
+            android:textColor="@color/rojo"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toTopOf="@+id/radioGroup" />
 
         <CheckBox
             android:id="@+id/checkRomantica"
@@ -215,6 +215,6 @@
             app:srcCompat="@drawable/ic_comprobar" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

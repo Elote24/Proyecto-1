@@ -75,91 +75,92 @@ class MainActivity : AppCompatActivity() {
         }
         var textoCategoria = ""
         if (checkRomantico.isChecked) {
-            textoCategoria += checkRomantico.text.toString()+"\n"
+            textoCategoria += checkRomantico.text.toString() + "\n"
         }
         if (checkTerror.isChecked) {
-            textoCategoria += checkTerror.text.toString()+"\n"
+            textoCategoria += checkTerror.text.toString() + "\n"
         }
         if (checkComedia.isChecked) {
-            textoCategoria += checkComedia.text.toString()+"\n"
+            textoCategoria += checkComedia.text.toString() + "\n"
         }
         if (checkAnime.isChecked) {
-            textoCategoria += checkAnime.text.toString()+"\n"
+            textoCategoria += checkAnime.text.toString() + "\n"
         }
         if (checkAccion.isChecked) {
-            textoCategoria += checkAccion.text.toString()+"\n"
+            textoCategoria += checkAccion.text.toString() + "\n"
         }
         val alertDialog = AlertDialog.Builder(fab.context)
-                .setTitle("Informacion de usuario")
-                .setMessage(
-                    textNombre.text.toString() + "\n" + editNombre.text
-                            + "\n\n" + textTelefono.text.toString() + "\n" + editTelefono.text
-                            + "\n\n" + textCorreo.text.toString() + "\n" + editCorreo.text
-                            + "\n\n" + textPlan.text.toString() + "\n" + textoRadio
-                            + "\n\n" + textCategoria.text.toString() + "\n" + textoCategoria
-                )
-                .create()
+            .setTitle("Informacion de usuario")
+            .setMessage(
+                textNombre.text.toString() + "\n" + editNombre.text
+                        + "\n\n" + textTelefono.text.toString() + "\n" + editTelefono.text
+                        + "\n\n" + textCorreo.text.toString() + "\n" + editCorreo.text
+                        + "\n\n" + textPlan.text.toString() + "\n" + textoRadio
+                        + "\n\n" + textCategoria.text.toString() + "\n" + textoCategoria
+            )
+            .create()
 
-            alertDialog.show()
+        alertDialog.show()
+    }
+
+
+    private val changeChecked = CompoundButton.OnCheckedChangeListener { button, checked ->
+        val categorias = mutableListOf<Categoria>()
+        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+        val categoriaAdapter = CategoriaAdapter(categorias)
+        recyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.adapter = categoriaAdapter
+
+        if (checkRomantico.isChecked) {
+            categorias.add(
+                Categoria(
+                    " Romantica",
+                    R.drawable.ic_romantico
+                )
+            )
+            categoriaAdapter.notifyDataSetChanged()
         }
 
-
-        private val changeChecked = CompoundButton.OnCheckedChangeListener { button, checked ->
-            val categorias = mutableListOf<Categoria>()
-            val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-            val categoriaAdapter = CategoriaAdapter(categorias)
-            recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-            recyclerView.adapter = categoriaAdapter
-
-            if (checkRomantico.isChecked) {
-                categorias.add(
-                    Categoria(
-                        " Romantica",
-                        R.drawable.ic_romantico
-                    )
+        if (checkTerror.isChecked) {
+            categorias.add(
+                Categoria(
+                    " Terror",
+                    R.drawable.ic_terror
                 )
-                categoriaAdapter.notifyDataSetChanged()
-            }
+            )
+            categoriaAdapter.notifyDataSetChanged()
+        }
 
-            if (checkTerror.isChecked) {
-                categorias.add(
-                    Categoria(
-                        " Terror",
-                        R.drawable.ic_terror
-                    )
+        if (checkComedia.isChecked) {
+            categorias.add(
+                Categoria(
+                    " Comedia",
+                    R.drawable.ic_comedia
                 )
-                categoriaAdapter.notifyDataSetChanged()
-            }
+            )
+            categoriaAdapter.notifyDataSetChanged()
+        }
 
-            if (checkComedia.isChecked) {
-                categorias.add(
-                    Categoria(
-                        " Comedia",
-                        R.drawable.ic_comedia
-                    )
+        if (checkAnime.isChecked) {
+            categorias.add(
+                Categoria(
+                    " Anime",
+                    R.drawable.ic_anime
                 )
-                categoriaAdapter.notifyDataSetChanged()
-            }
+            )
+            categoriaAdapter.notifyDataSetChanged()
+        }
 
-            if (checkAnime.isChecked) {
-                categorias.add(
-                    Categoria(
-                        " Anime",
-                        R.drawable.ic_anime
-                    )
+        if (checkAccion.isChecked) {
+            categorias.add(
+                Categoria(
+                    " Accion",
+                    R.drawable.ic_accion
                 )
-                categoriaAdapter.notifyDataSetChanged()
-            }
-
-            if (checkAccion.isChecked) {
-                categorias.add(
-                    Categoria(
-                        " Accion",
-                        R.drawable.ic_accion
-                    )
-                )
-                categoriaAdapter.notifyDataSetChanged()
-            }
+            )
+            categoriaAdapter.notifyDataSetChanged()
         }
     }
+}
 
